@@ -8,7 +8,7 @@ function onYouTubeIframeAPIReady() {
     player = new YT.Player('player', {
         height: '315',
         width: '560',
-        videoId: 'StarrySky', // ID do vídeo
+        videoId: '6QSUTjsHU6s&t', // ID do vídeo
         events: { 'onReady': () => console.log('Player is ready') }
     });
 }
