@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <title>Document</title>
+  </head>
+  <body class="__className_6d65e1 dark" style="overflow: auto">
+    <header class="styles_headerContainer__5wTW5">
+      <div class="styles_button__wkn_z"></div>
+      <div class="styles_logo__6zrBN">
+        <img
+          alt="Cofenplay"
+          fetchpriority="high"
+          width="100"
+          height="100"
+          decoding="async"
+          data-nimg="1"
+          srcset="
+            https://static.cofenplay.com.br/produto/3/logo.svg 1x,
+            https://static.cofenplay.com.br/produto/3/logo.svg 2x
+          "
+          src="https://static.cofenplay.com.br/produto/3/logo.svg"
+          style="color: transparent"
+        />
+      </div>
+      <div class="styles_closeButton__WdvoB">×</div>
+    </header>
+    <div class="styles_bannerContainer__r1M3O" id="mainBanner">
+      <img
+        alt="Banner"
+        fetchpriority="high"
+        decoding="async"
+        data-nimg="fill"
+        class="styles_banner__kRdER"
+        sizes="100vw"
+        src="https://static.cofenplay.com.br/images/course/123957/banner.jpg"
+      />
+    </div>
+
+    <div class="styles_courseContent__iCJZu">
+      <div class="styles_col60__muL_s styles_column__qXs_C">
+        <div class="styles_courseDescription__LxCrY">
+          <h2>ESCOLHA UM VÍDEO AO LADO</h2>
+            <div id="player"></div>
+            <div class="styles_buttonContainer__Qh2cr">
+              <button class="styles_btnPrimary__HAzrt">Certificado</button>
+              <button class="styles_btnPrimary__HAzrt" id="play" onclick="togglePlay()">
+                <i class="fas fa-play"></i>
+              </button>
+              <button class="styles_btnPrimary__HAzrt" id="up" onclick="increaseVolume()">
+                <i class="fas fa-volume-up"></i>
+              </button>
+              <button class="styles_btnPrimary__HAzrt" id="down" onclick="decreaseVolume()">
+                <i class="fas fa-volume-down"></i>
+              </button>
+              <button class="styles_btnPrimary__HAzrt" id="fs" onclick="toggleFullscreen()">
+                <i class="fas fa-expand"></i> Fullscreen
+              </button>
+            </div>
+            <div id="volume-display" style="display: none;">Volume: 100%</div>
+        </div>
+      </div>
+      <div class="styles_col40__WKbs3 styles_column__qXs_C">
+        <h2>PROGRAMAÇÃO</h2>
+        <ul class="styles_modulesContainer__hAmEz" id="modulesContainer">
+          <li id="md-1" class="styles_itemModuleEventContainer__wyap8">
+            <div class="styles_title__3e_XQ">
+              <div class="styles_infos__ZVM25">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  viewBox="0 0 29.237 29.237"
+                >
+                  <path
+                    d="M7.685 24.819h.595v-2.131h3.688v2.131h.596v-2.131h3.862v2.131h.597v-2.131h4.109v2.131h.595v-2.131h3.417v-.594h-3.417v-3.861h3.417v-.596h-3.417v-3.519h3.417v-.594h-3.417v-2.377h-.595v2.377h-4.109v-2.377h-.597v2.377h-3.862v-2.377h-.596v2.377H8.279v-2.377h-.594v2.377H3.747v.594h3.938v3.519H3.747v.596h3.938v3.861H3.747v.594h3.938v2.131zm4.878-2.725v-3.861h3.862v3.861h-3.862zm8.569 0h-4.109v-3.861h4.109v3.861zm0-7.976v3.519h-4.109v-3.519h4.109zm-4.706 0v3.519h-3.862v-3.519h3.862zm-8.147 0h3.688v3.519H8.279v-3.519zm0 4.115h3.688v3.861H8.279v-3.861z"
+                  ></path>
+                  <path
+                    d="m29.207 2.504-4.129.004-.603.002v2.448a1.19 1.19 0 0 1-1.188 1.187h-1.388a1.189 1.189 0 0 1-1.188-1.187V2.514l-1.583.002v2.442c0 .653-.535 1.187-1.191 1.187h-1.388a1.19 1.19 0 0 1-1.188-1.187V2.517l-1.682.004v2.438a1.19 1.19 0 0 1-1.189 1.187h-1.389a1.19 1.19 0 0 1-1.188-1.187V2.525H8.181v2.434a1.19 1.19 0 0 1-1.188 1.187H5.605a1.19 1.19 0 0 1-1.189-1.187V2.53L0 2.534v26.153h27.15l2.087-.006-.03-26.177zM27.15 26.606H2.09V9.897h25.06v16.709z"
+                  ></path>
+                  <path
+                    d="M5.605 5.303h1.388a.297.297 0 0 0 .296-.297V.846a.296.296 0 0 0-.296-.297H5.605a.297.297 0 0 0-.298.297v4.16c0 .164.133.297.298.297zm5.496 0h1.389a.297.297 0 0 0 .297-.297V.846a.298.298 0 0 0-.298-.297H11.1a.296.296 0 0 0-.296.297v4.16a.298.298 0 0 0 .297.297zm5.448 0h1.388a.297.297 0 0 0 .299-.297V.846a.297.297 0 0 0-.299-.297h-1.388a.296.296 0 0 0-.297.297v4.16c0 .164.133.297.297.297zm5.35 0h1.388a.296.296 0 0 0 .296-.297V.846a.296.296 0 0 0-.296-.297h-1.388a.296.296 0 0 0-.297.297v4.16a.298.298 0 0 0 .297.297z"
+                  ></path>
+                </svg>
+                <p>
+                  04/09/2024 <br />
+                  <span> - </span> Quarta-feira
+                </p>
+              </div>
+              <button class="styles_btnPrimary__HAzrt">ASSISTIR</button>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <footer class="styles_container__lWOR5">
+      <ul>
+        <li>
+          <img
+            alt=""
+            loading="lazy"
+            width="100"
+            height="100"
+            decoding="async"
+            data-nimg="1"
+            src="https://static.cofenplay.com.br/produto/3/images/cofen-white.svg"
+            style="color: transparent; width: 100%; height: auto"
+          />
+        </li>
+        <li>
+          <img
+            alt=""
+            loading="lazy"
+            width="100"
+            height="100"
+            decoding="async"
+            data-nimg="1"
+            src="https://static.cofenplay.com.br/produto/3/images/coren-white.svg"
+            style="color: transparent; width: 100%; height: auto"
+          />
+        </li>
+      </ul>
+      <div class="styles_links__f3O1h">
+        <a target="_blank" href="https://cofenplay.com.br/ajuda">Ajuda</a
+        ><a target="_blank" href="https://cofenplay.com.br/termos"
+          >Termos de uso</a
+        ><a target="_blank" href="https://cofenplay.com.br/privacidade"
+          >Política de privacidade</a
+        ><a href="https://cofenplay.com.br/"></a>
+      </div>
+      <div class="styles_socials__y_gWO">
+        <a target="_blank" href="https://www.facebook.com/eucurtoaenfermagem"
+          ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path
+              fill="currentColor"
+              d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"
+            ></path></svg></a
+        ><a target="_blank" href="https://www.instagram.com/cofen_oficial"
+          ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path
+              fill="currentColor"
+              d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
+            ></path></svg></a
+        ><a
+          target="_blank"
+          href="https://twitter.com/i/flow/login?redirect_after_login=%2FCofen_oficial%2F"
+          ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path
+              fill="currentColor"
+              d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"
+            ></path></svg></a
+        ><a target="_blank" href="https://www.youtube.com/c/SomosEnfermagemTV"
+          ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path
+              fill="currentColor"
+              d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"
+            ></path></svg
+        ></a>
+      </div>
+      <div class="styles_product__Tlefu">
+        <a href="https://reader.cofenplay.com.br/">Cofenplay ® 2023</a
+        ><span>|</span
+        ><a href="https://reader.cofenplay.com.br/">cofenplay.com.br</a>
+      </div>
+      <div class="styles_developed__TwebP">
+        <img
+          alt=""
+          loading="lazy"
+          width="100"
+          height="100"
+          decoding="async"
+          data-nimg="1"
+          src="https://static.cofenplay.com.br/produto/3/images/by-bookplay.svg"
+          style="color: transparent; width: 100%; height: auto"
+        />
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
