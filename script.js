@@ -8,7 +8,7 @@ function onYouTubeIframeAPIReady() {
     player = new YT.Player('player', {
         height: '315',
         width: '560',
-        videoId: '6QSUTjsHU6s&t', // ID do vídeo
+        videoId: 'Xd2xr7zIFyk', // ID do vídeo
         events: { 'onReady': () => console.log('Player is ready') }
     });
 }
